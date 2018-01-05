@@ -35,15 +35,13 @@
 		    animate:true,
 		    onClick: function(node){
 		    	if($(this).tree("isLeaf",node.target)){ // 如果该节点是叶节点就填写到categoryId中,并关闭窗口
-    				//_ele.parent().find("[name=categoryId]").val(node.id);
-    				//_ele.next().text(node.text).attr("categoryId",node.id);
     				if(node.url){
     					alert(node.url );
     				}
-    				//$(_win).window('close');
     			}
     		}
 		});
+		
 		 $("#demo").load('login2.jsp');
 		
 	});
@@ -88,19 +86,7 @@
 		}
 		return nodes;
 	}
-	/* 
-	EasyUI 相关教程
-	1. 使用 javascript 创建窗口（window）
-	div 标签 id="win"
-	$('#win').window({
-	    width:600,
-	    height:400,
-	    modal:true
-	});
-	2. 打开和关闭窗口（window）
-	$('#win').window('open'); // open a window
-	$('#win').window('close'); // close a window
-	*/
+
 	</script>
 	
 	
