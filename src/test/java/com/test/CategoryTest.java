@@ -13,6 +13,7 @@ import com.itdragon.common.pojo.EUTreeNode;
 import com.itdragon.service.CategoryService;
 //加载配置文件
 @RunWith(SpringJUnit4ClassRunner.class)
+//加载配置文件
 @ContextConfiguration(locations={"classpath:spring/applicationContext-*.xml","classpath:spring/springmvc.xml"})
 public class CategoryTest {
 	@Autowired
