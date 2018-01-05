@@ -8,7 +8,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;  
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.web.client.RestTemplate;
+
 import com.itdragon.common.pojo.EUTreeNode;
 import com.itdragon.service.CategoryService;
 
@@ -22,6 +24,7 @@ import com.itdragon.service.CategoryService;
 public class CategoryTest {
 	@Autowired
 	private CategoryService categoryService ;
+	
 	@Test
 	public void testCategory(){
 		List<EUTreeNode> categories =categoryService.getCategoryList();
@@ -29,6 +32,17 @@ public class CategoryTest {
 		Assert.assertNotEquals(categories.size(), 0);
 		Assert.assertNotNull(categories);
 		
+	}
+	
+	//运用Spring给的接口调用方法。restTemplate
+	@Test
+	public void testTemplate(){
+		 RestTemplate restTemplate =new RestTemplate() ;
+		List<EUTreeNode> list	=restTemplate.getForObject("http://localhost:8080/category/async/", List.class) ;
+		Assert.assertNotEquals(list.size(), 0);
+		
+		List<EUTreeNode> list2 =restTemplate.postForObject("http://localhost:8080/category/sync/", null, List.class) ;
+		Assert.assertNotEquals(list2.size(), 0);
 	}
  
 }
