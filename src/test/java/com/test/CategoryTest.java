@@ -37,6 +37,7 @@ public class CategoryTest {
 	//运用Spring给的接口调用方法。restTemplate
 	@Test
 	public void testTemplate(){
+		//远程调用其他的接口。
 		 RestTemplate restTemplate =new RestTemplate() ;
 		List<EUTreeNode> list	=restTemplate.getForObject("http://localhost:8080/category/async/", List.class) ;
 		Assert.assertNotEquals(list.size(), 0);
