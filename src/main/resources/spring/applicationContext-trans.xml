@@ -9,15 +9,15 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 	<!-- 事务管理器 -->
-	<!-- <bean id="transactionManager"
+	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		数据源
+		<!-- 数据源 -->
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	通知
+	<!-- 通知 -->
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
-			传播行为
+			<!-- 传播行为 -->
 			<tx:method name="save*" propagation="REQUIRED" />
 			<tx:method name="insert*" propagation="REQUIRED" />
 			<tx:method name="add*" propagation="REQUIRED" />
@@ -29,9 +29,9 @@
 			<tx:method name="get*" propagation="SUPPORTS" read-only="true" />
 		</tx:attributes>
 	</tx:advice>
-	切面
+	<!-- 切面 -->
 	<aop:config>
 		<aop:advisor advice-ref="txAdvice"
 			pointcut="execution(* com.itdragon.service.*.*(..))" />
-	</aop:config> -->
+	</aop:config>
 </beans>
