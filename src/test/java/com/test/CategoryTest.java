@@ -11,7 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;  
 import com.itdragon.common.pojo.EUTreeNode;
 import com.itdragon.service.CategoryService;
-//加载配置文件学习解决冲突
+//加载配置文件学习解决冲突222
 @RunWith(SpringJUnit4ClassRunner.class)
 //加载配置文件
 @ContextConfiguration(locations={"classpath:spring/applicationContext-*.xml","classpath:spring/springmvc.xml"})
