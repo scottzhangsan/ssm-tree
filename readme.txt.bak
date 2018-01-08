@@ -24,4 +24,4 @@ artifactId.可以认为是maven构建的项目名，比如你的项目有子项�
 
 version版本号。SHAPSHOT意为快照，
 
-build 表示与项目构建有关的，build下有fileName表示最终构建之后的项目名。11
+build 表示与项目构建有关的，build下有fileName表示最终构建之后的项目名。
