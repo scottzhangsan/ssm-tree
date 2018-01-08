@@ -24,4 +24,8 @@ artifactId.可以认为是maven构建的项目名，比如你的项目有子项�
 
 version版本号。SHAPSHOT意为快照，
 
-build 表示与项目构建有关的，build下有fileName表示最终构建之后的项目名。11
+build 表示与项目构建有关的，build下有fileName表示最终构建之后的项目名。
+
+WM_CONCAT,该函数可以把列的值以“,”号分割起来，并显示成一行。oracle中的应用。
+
+GROUP_CONCAT函数返回一个字符串结果，改结果是有分组中的值连接组合而成并显示成一行，和oracle中的WM_CONCAT用法相同。
