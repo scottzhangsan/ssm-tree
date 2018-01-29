@@ -1,4 +1,4 @@
-1:对于webservice的理解。
+1:对于webservice的理解。 12345
 
 wsdl:definitions:根节点，首先根节点是wsdl:definitions表示这是一个
 wsdl文件。
